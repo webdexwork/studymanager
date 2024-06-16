@@ -1,0 +1,122 @@
+/*Some overall styles*/
+.TasksMain {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.left, .right {
+    width: 50%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Right styles*/
+.right img {
+    width: 75%;
+}
+
+/*Left styles*/
+.TaskSection {
+    display: flex;
+    flex-direction: column;
+}
+.TaskSection h1 {
+    font-size: 4vw;
+}
+.TaskSection ol {
+    list-style: none;
+}
+.AddTask {
+    display: flex;
+    margin: 1vh 0;
+    width: 100%;
+    justify-content: space-between;
+}
+ol li {
+    display: flex;
+    justify-content: space-between;
+    margin: 2vh 0;
+    animation: slideInLeft 1s ease;
+}
+.AddTask input, ol span {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 60px;
+    background-color: #fff;
+    border: none;
+    border-radius: 40px;
+    padding-left: 20px;
+    font-size: 1.5vw;
+}
+.AddTask button, ol button {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border: none;
+    border-radius: 60px;
+    font-size: 3vw;
+}
+.done {
+    transition: 0.75s;
+}
+.done:hover {
+    background-color: #00bf63;
+    border: 2px solid #545454;
+    transition: 0.75s ease;
+}
+.AddTask button:hover {
+    animation: rotate 0.75s ease-in-out;
+}
+hr {
+    width: 100%;
+    border: 1px solid #61F9B9;
+    margin: 2vh 0;
+}
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0%); }
+}
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg);}
+}
+
+@media screen and (max-width: 800px) {
+    .TasksMain {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .right {
+        display: none;
+    }
+    .left, .TaskSection {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .TaskSection h1 {
+        font-size: 6vw;
+    }
+    .AddTask input, ol span {
+        font-size: 4vw;
+        width: 70%;
+    }
+    .AddTask button, ol button {
+        font-size: 6vw;
+    }
+
+    ol {
+        width: 100%;
+    }
+}

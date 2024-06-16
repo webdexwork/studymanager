@@ -1,0 +1,3 @@
+Tämä on simppeli avustaja nettisivu opiskelijalle. Tehty, koska harjoittelin reactia!
+Ehkä päivittelen joskus, saa nähdä...
+Rakastan sua M <3
