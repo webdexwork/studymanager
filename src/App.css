@@ -48,6 +48,17 @@ nav a:hover::before {
     transition: 0.5s ease-in-out;
 }
 
+footer {
+    width: 100%;
+    height: 8vh;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width: 800px) {
     nav a {
         margin: 0 1vh;

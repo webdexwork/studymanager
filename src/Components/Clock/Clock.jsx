@@ -24,7 +24,7 @@ const Clock = () => {
     }
 
     const handleResetTimer = () => {
-        setSeconds(0)
+        setSeconds(3600)
         setStartTimer(false)
     }
 

@@ -3,7 +3,7 @@ import styles from './Tasks.module.css';
 import TaskImg from '../../assets/pic1.svg';
 import CheckImg from '../../assets/check.png';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Tasks = () => {
 
@@ -12,6 +12,14 @@ const Tasks = () => {
     //UseState for tasks
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewtask] = useState('');
+
+    const [secretMessage, setSecretMessage] = useState('')
+
+    useEffect(() => {
+        if (tasks[0] === 'P' && tasks[1] === 'R' && tasks[2] === 'K') {
+            setSecretMessage('Nettisivun on kehittänyt Pasin Ritarikunta')
+        }
+    })
 
     //Capturing the input
     function handleInputChange(event) {
@@ -38,6 +46,7 @@ const Tasks = () => {
         <main className={styles.TasksMain}>
             <section className={styles.left}>
                 <div className={styles.TaskSection}>
+                    <p>{secretMessage}</p>
                     <h1>Tänään tehtävänä✍🏼</h1>
                     <div className={styles.AddTask}>
                         <input 
@@ -53,7 +62,7 @@ const Tasks = () => {
                         {tasks.map((task, index) => (
                             <li key={index}>
                                 <span className={styles.text}>{task}</span>
-                                <button className={styles.done} onClick={() => deleteTask(index)}><img src={CheckImg} alt="" width={20}/></button>
+                                <button className={styles.done} onClick={() => deleteTask(index)}><img src={CheckImg} alt=""/></button>
                             </li>
                         ))}
                     </ol>

@@ -35,6 +35,10 @@ function App() {
       <section ref={tasksRef}><Tasks/></section>
       <section ref={clockRef}><Clock/></section>
       <section ref={quoteRef}><Quote/></section>
+
+      <footer>
+        <h4>I ❤️ ReactJS</h4>
+      </footer>
       
     </>
   )
